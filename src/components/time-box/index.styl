@@ -1,0 +1,63 @@
+@import '../../styles/index.styl'
+
+.{$prefix}time-box
+  position relative
+  width 600px
+  display flex
+  justify-content center
+
+  &&-horizontal
+    align-items center
+    justify-content initial
+    width 200px
+    height 600px
+
+    .{$prefix}time-box-content
+      display flex
+      align-items center
+
+  &-content
+    width 100%
+
+  &-inner
+    width 180px
+    color #a5bcd1
+    font-size 14px
+    opacity 1
+    transition all $motion-duration $motion-func 0ms
+    display flex
+    align-items center
+    margin-top 10px
+
+    &&-left
+      float left
+      margin-left 30px
+
+      &.{$prefix}time-box-inner-hidden
+        margin-left 0px
+        opacity 0
+
+    &&-right
+      float right
+      margin-right 30px
+
+      &.{$prefix}time-box-inner-hidden
+        margin-right 0px
+        opacity 0
+
+    &&-top
+      margin-top -370px
+      &.{$prefix}time-box-inner-hidden
+        margin-top -400px
+        opacity 0
+
+    &&-bottom
+      margin-top 370px
+      &.{$prefix}time-box-inner-hidden
+        margin-top 440px
+        opacity 0
+
+
+
+  .{$prefix}spinner
+    position absolute
